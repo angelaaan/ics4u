@@ -4,31 +4,36 @@ import java.util.Random;
 
 public class FoodTruck extends FoodCorner {
     Random rand = new Random();
-    int forkCount = rand.nextInt(20);
 
     static String[] menuArr = {"burger n fries", "pizza", "banana", "pie", "cherries", "pretzel", "aspirin"};
-    static int[] priceMenuArr = new int[7];
 
     public FoodTruck(){
-        super(menuArr, priceMenuArr);
+        super(menuArr);
+        priceMenu = makeMenu();
+    }
 
+    public int[] makeMenu(){
+        int[] arr = new int[7];
+
+        Random rand = new Random();
+
+        for (int i = 0 ;i <arr.length; i++){
+            arr[i] = rand.nextInt(14)+5;
+        }
+
+        return arr;
     }
 
     public void printMenu(){
-
+        System.out.println("•━━ FOOD TRUCK ━━•\n");
         for (int i = 0 ; i<menu.length; i++){
-            System.out.println(menu[i] + " " + priceMenu[i] + "\n");
+            System.out.println(menuArr[i] + " $" + priceMenu[i] + "\n");
         }
 
     }
 
-    public void makePriceMenu(){
-        Random rand = new Random();
-
-        for (int i = 0 ;i <priceMenuArr.length; i++){
-            priceMenuArr[i] = rand.nextInt(11)+1;
-        }
-    }
-
+    //getting foodies
+    public String 
 
 }
+
