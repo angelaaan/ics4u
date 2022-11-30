@@ -1,11 +1,9 @@
-package Carnival;
-
 import java.util.Random;
 
 public class FoodTruck extends FoodCorner {
     Random rand = new Random();
 
-    static String[] menuArr = {"burger n fries", "pizza", "banana", "pie", "cherries", "pretzel", "aspirin"};
+    static String[] menuArr = {"burger n fries", "pizza", "chocolate", "pickles", "cherries", "pretzel"};
 
     public FoodTruck(){
         super(menuArr);
@@ -13,7 +11,7 @@ public class FoodTruck extends FoodCorner {
     }
 
     public int[] makeMenu(){
-        int[] arr = new int[7];
+        int[] arr = new int[6];
 
         Random rand = new Random();
 
@@ -32,8 +30,83 @@ public class FoodTruck extends FoodCorner {
 
     }
 
+    public String run(){
+        
+    }
+
     //getting foodies
-    public String 
+    public String getBurger(){
+        String burger = "                            |\\ /| /|_/|\n"
+        + "                          |\\||-|\\||-/|/|\n"
+        + "                           \\\\|\\|//||///\n"
+        + "          _..----.._       |\\/\\||//||||\n"
+        + "        .'     o    '.     |||\\\\|/\\\\ ||\n"
+        + "       /   o       o  \\    | './\\_/.' |\n"
+        + "      |o        o     o|   |          |\n"
+        + "      /'-.._o     __.-'\\   |          |\n"
+        + "      \\      `````     /   |          |\n"
+        + "      |``--........--'`|    '.______.'\n"
+        + "       \\              /\n"
+        + "        `'----------'`\n";
+        return burger;
+    }
+
+    public String getPizza(){
+        String pizza = "    __\n"
+        + "  // \"\"--.._\n"
+        + " ||  (_)  _ \"-._\n"
+        + " ||    _ (_)    '-.\n"
+        + " ||   (_)   __..-'\n"
+        + "  \\__..--\"\"\n";
+        return pizza;
+    }
+
+    public String getChocolate(){
+        String choco = "     __ __ __ __ __\n"
+        + "   /__/__/__/__/__/|\n"
+        + "  /__/__/__/__/__/|/\n"
+        + "  |__'__'__'__'__|/\n";
+        return choco;
+    }
+
+    public String getPickles(){
+        String pickleJar = "          ___________\n"
+        + "         [___________]\n"
+        + "         /           \\\n"
+        + "        /~~^~^~^~^~^~^\\\n"
+        + "       |===============|\n"
+        + "       | P I C K L E S |\n"
+        + "       | ,-.   __      |\n"
+        + "       | \\ ,'-'. )     |\n"
+        + "       |  '._'_;'      |\n"
+        + "       ;===============;\n"
+        + "        \\             /\n" 
+        + "         `\"\"\"\"\"``\"\"\"\"`\n";
+        return pickleJar;
+    }
+
+    public String getCherries(){
+        String cherrie = "   __.--~~.,-.__\n"
+        + "   `~-._.-(`-.__`-.\n"
+        + "           \\    `~~`\n"
+        + "      .--./ \\\n"
+        + "     /#   \\  \\.--.\n"
+        + "     \\    /  /#   \\\n"
+        + "      '--'   \\    /\n"
+        + "              '--'\n";
+        return cherrie;
+    }
+
+    public String getPretzel(){
+        String pretzel = "    __       __\n"
+        + "  .'  `'._.'`  '.\n"
+        + " |  .--;   ;--.  |\n"
+        + " |  (  /   \\  )  |\n"
+        + "  \\  ;` /^\\ `;  /\n"
+        + "   :` .'._.'. `;\n"
+        + "   '-`'.___.'`-'\n";
+        return pretzel;
+    }
 
 }
 

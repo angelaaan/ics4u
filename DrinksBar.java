@@ -1,8 +1,10 @@
+import java.util.Random;
+
 public class DrinksBar extends FoodCorner {
     Random rand = new Random();
 
-    static String[] menuArr = {"martini", "milk", "cola", "coffee", "tea", "Pepsi", "tomato soup"};
-    static int[] priceMenuArr = new int[7];
+    static String[] menuArr = {"grape juice", "milk", "Pepsi", "coffee", "tea", "root beer"};
+    static int[] priceMenuArr = new int[6];
 
     public DrinksBar(){
         super(menuArr);
@@ -10,7 +12,7 @@ public class DrinksBar extends FoodCorner {
     }
 
     public int[] makeMenu(){
-        int[] arr = new int[7];
+        int[] arr = new int[6];
 
         Random rand = new Random();
 
@@ -27,6 +29,68 @@ public class DrinksBar extends FoodCorner {
             System.out.println(menuArr[i] + " $" + priceMenu[i] + "\n");
         }
 
+    }
+
+    public String getGrapeJuice(){
+        String juice = "                  __\n"
+        + "                 /.-\n"
+        + "         ______ //\n"
+        + "        /______'/|\n"
+        + "        [       ]|\n"
+        + "        [ Grape ]|\n"
+        + "        [ Juice ]|\n"
+        + "        [  _\\_  ]|\n"
+        + "        [  :::  ]|\n"
+        + "        [   :'  ]/\n"
+        + "        '-------'\n";
+        return juice;
+    }
+
+    public String getPepsi(){
+        String pepsi = "       .=.\n"
+        + "       } {\n"
+        + "      .' '.\n"
+        + "     /     \\\n"
+        + "     ;'---';\n"
+        + "     |PEPSI|\n"
+        + "     | .-. |\n"
+        + "     | '-' |\n"
+        + "     |'---'|\n"
+        + "     '._._.'\n";
+        return pepsi;
+    }
+
+    public String getCoffee(){
+        String coffee = "               )\n"
+        + "              (\n"
+        + "                  )\n"
+        + "          ,.----------.\n"
+        + "         ((|          |\n"
+        + "        .--\\          /--.\n"
+        + "      '._  '========'  _.'\n"
+        + "          `\"\"\"\"\"\"\"\"\"\"\"\"`";
+        return coffee;
+    }
+
+    public String getTea(){
+        String tea = "         _..,----,.._\n"
+        + "      .-;'-.,____,.-';\n"
+        + "     (( |            |\n"
+        + "      `))            ;\n"
+        + "       ` \\          /\n"
+        + "      .-' `,.____.,' '-.\n"
+        + "     (     '------'     )\n"
+        + "      `-=..________..--'";
+        return tea;
+    }
+
+    public String getRootBeer(){
+        String root = "        .:.\n"
+        + "       _oOoOo\n"
+        + "      [_|||||\n"
+        + "        |||||\n"
+        + "        ~~~~~\n";
+        return root;
     }
     
 }
