@@ -1,4 +1,4 @@
-import java.util.Random;
+import java.util.*;
 
 public abstract class FoodCorner {
 
@@ -36,4 +36,19 @@ public abstract class FoodCorner {
         return null;
     }
     
+    public String userDecision(){
+
+        Scanner in = new Scanner (System.in);
+
+        int choice = in.nextInt();
+
+        if (choice == 7){
+            System.out.println("See you soon <3 goodbye now");
+            return "";
+        } else {
+            System.out.println(menu[1][(choice-1)]);
+            return menu[0][(choice-1)];
+        }
+
+    }
 }
