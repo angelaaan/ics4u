@@ -4,10 +4,10 @@ public abstract class FoodCorner {
 
     int balance;
 
-    String[] menu = new String[7];
+    String[][] menu = new String[7][2];
     int [] priceMenu = new int[7];
 
-    public FoodCorner (String[] newMenu) {
+    public FoodCorner (String[][] newMenu) {
         menu = newMenu;
     }
 
@@ -18,8 +18,8 @@ public abstract class FoodCorner {
     //public abstract void printMenu();
 
     public void printMenu(){
-        for (int i = 0 ; i<menu.length; i++){
-            System.out.print("[" + (i+1) +"] --" + menu[i] + " $" + priceMenu[i] + "\n");
+        for (int i = 0 ; i<6; i++){
+            System.out.print("[" + (i+1) +"] --" + menu[0][i] + " $" + priceMenu[i] + "\n");
         }
     }
 

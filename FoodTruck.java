@@ -3,7 +3,61 @@ import java.util.*;
 public class FoodTruck extends FoodCorner {
     Random rand = new Random();
 
-    static String[] menuArr = {"burger n fries", "pizza", "chocolate", "pickles", "cherries", "pretzel", "EXIT"};
+    static String[][] menuArr = { {"burger n fries", "pizza", "chocolate", "pickles", "cherries", "pretzel", "EXIT"},
+                                {"                            |\\ /| /|_/|\n"
+                                + "                          |\\||-|\\||-/|/|\n"
+                                + "                           \\\\|\\|//||///\n"
+                                + "          _..----.._       |\\/\\||//||||\n"
+                                + "        .'     o    '.     |||\\\\|/\\\\ ||\n"
+                                + "       /   o       o  \\    | './\\_/.' |\n"
+                                + "      |o        o     o|   |          |\n"
+                                + "      /'-.._o     __.-'\\   |          |\n"
+                                + "      \\      `````     /   |          |\n"
+                                + "      |``--........--'`|    '.______.'\n"
+                                + "       \\              /\n"
+                                + "        `'----------'`\n", 
+                                "    __\n"
+        + "  // \"\"--.._\n"
+        + " ||  (_)  _ \"-._\n"
+        + " ||    _ (_)    '-.\n"
+        + " ||   (_)   __..-'\n"
+        + "  \\__..--\"\"\n"
+                                , 
+                                "     __ __ __ __ __\n"
+        + "   /__/__/__/__/__/|\n"
+        + "  /__/__/__/__/__/|/\n"
+        + "  |__'__'__'__'__|/\n", 
+                                
+        "          ___________\n"
+        + "         [___________]\n"
+        + "         /           \\\n"
+        + "        /~~^~^~^~^~^~^\\\n"
+        + "       |===============|\n"
+        + "       | P I C K L E S |\n"
+        + "       | ,-.   __      |\n"
+        + "       | \\ ,'-'. )     |\n"
+        + "       |  '._'_;'      |\n"
+        + "       ;===============;\n"
+        + "        \\             /\n" 
+        + "         `\"\"\"\"\"``\"\"\"\"`\n", 
+        
+        "   __.--~~.,-.__\n"
+        + "   `~-._.-(`-.__`-.\n"
+        + "           \\    `~~`\n"
+        + "      .--./ \\\n"
+        + "     /#   \\  \\.--.\n"
+        + "     \\    /  /#   \\\n"
+        + "      '--'   \\    /\n"
+        + "              '--'\n", 
+        
+        "    __       __\n"
+        + "  .'  `'._.'`  '.\n"
+        + " |  .--;   ;--.  |\n"
+        + " |  (  /   \\  )  |\n"
+        + "  \\  ;` /^\\ `;  /\n"
+        + "   :` .'._.'. `;\n"
+        + "   '-`'.___.'`-'\n", ""} };
+
 
     public FoodTruck(int money){
         super(menuArr);
@@ -48,7 +102,7 @@ public class FoodTruck extends FoodCorner {
     }
 
     //getting foodies
-    public String getBurger(){
+    public static String getBurger(){
         String burger = "                            |\\ /| /|_/|\n"
         + "                          |\\||-|\\||-/|/|\n"
         + "                           \\\\|\\|//||///\n"
@@ -64,7 +118,7 @@ public class FoodTruck extends FoodCorner {
         return burger;
     }
 
-    public String getPizza(){
+    public static String getPizza(){
         String pizza = "    __\n"
         + "  // \"\"--.._\n"
         + " ||  (_)  _ \"-._\n"
@@ -74,7 +128,7 @@ public class FoodTruck extends FoodCorner {
         return pizza;
     }
 
-    public String getChocolate(){
+    public static String getChocolate(){
         String choco = "     __ __ __ __ __\n"
         + "   /__/__/__/__/__/|\n"
         + "  /__/__/__/__/__/|/\n"
@@ -82,7 +136,7 @@ public class FoodTruck extends FoodCorner {
         return choco;
     }
 
-    public String getPickles(){
+    public static String getPickles(){
         String pickleJar = "          ___________\n"
         + "         [___________]\n"
         + "         /           \\\n"
@@ -98,7 +152,7 @@ public class FoodTruck extends FoodCorner {
         return pickleJar;
     }
 
-    public String getCherries(){
+    public static String getCherries(){
         String cherrie = "   __.--~~.,-.__\n"
         + "   `~-._.-(`-.__`-.\n"
         + "           \\    `~~`\n"
@@ -110,8 +164,9 @@ public class FoodTruck extends FoodCorner {
         return cherrie;
     }
 
-    public String getPretzel(){
-        String pretzel = "    __       __\n"
+    public static String getPretzel(){
+        String pretzel = 
+        "    __       __\n"
         + "  .'  `'._.'`  '.\n"
         + " |  .--;   ;--.  |\n"
         + " |  (  /   \\  )  |\n"
