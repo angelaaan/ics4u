@@ -3,20 +3,21 @@ import java.util.Random;
 public class DrinksBar extends FoodCorner {
     Random rand = new Random();
 
-    static String[] menuArr = {"grape juice", "milk", "Pepsi", "coffee", "tea", "root beer"};
+    static String[] menuArr = {"grape juice", "milk", "Pepsi", "coffee", "tea", "root beer", "EXIT"};
     static int[] priceMenuArr = new int[6];
 
-    public DrinksBar(){
+    public DrinksBar(int money){
         super(menuArr);
+        balance = money;
         priceMenu = makeMenu();
     }
 
     public int[] makeMenu(){
-        int[] arr = new int[6];
+        int[] arr = new int[7];
 
         Random rand = new Random();
 
-        for (int i = 0 ;i <arr.length; i++){
+        for (int i = 0 ;i <arr.length-1; i++){
             arr[i] = rand.nextInt(20)+2;
         }
 
@@ -25,10 +26,7 @@ public class DrinksBar extends FoodCorner {
 
     public void printMenu(){
         System.out.println("•━━ DRINKS BAR ━━•\n");
-        for (int i = 0 ; i<menu.length; i++){
-            System.out.println(menuArr[i] + " $" + priceMenu[i] + "\n");
-        }
-
+        super.printMenu();
     }
 
     public String getGrapeJuice(){

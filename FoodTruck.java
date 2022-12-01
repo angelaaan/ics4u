@@ -1,21 +1,22 @@
-import java.util.Random;
+import java.util.*;
 
 public class FoodTruck extends FoodCorner {
     Random rand = new Random();
 
-    static String[] menuArr = {"burger n fries", "pizza", "chocolate", "pickles", "cherries", "pretzel"};
+    static String[] menuArr = {"burger n fries", "pizza", "chocolate", "pickles", "cherries", "pretzel", "EXIT"};
 
-    public FoodTruck(){
+    public FoodTruck(int money){
         super(menuArr);
+        balance = money;
         priceMenu = makeMenu();
     }
 
     public int[] makeMenu(){
-        int[] arr = new int[6];
+        int[] arr = new int[7];
 
         Random rand = new Random();
 
-        for (int i = 0 ;i <arr.length; i++){
+        for (int i = 0 ;i <arr.length-1; i++){
             arr[i] = rand.nextInt(14)+5;
         }
 
@@ -24,14 +25,26 @@ public class FoodTruck extends FoodCorner {
 
     public void printMenu(){
         System.out.println("•━━ FOOD TRUCK ━━•\n");
-        for (int i = 0 ; i<menu.length; i++){
-            System.out.println(menuArr[i] + " $" + priceMenu[i] + "\n");
-        }
-
+        super.printMenu();
     }
 
     public String run(){
+        Scanner in = new Scanner (System.in);
+
+        super.run();
+
+        System.out.println("Hiya sweetcheeks! Welcome to the FOODTRUCK"
+        + "\nIs there anything I can get for ya?");
+
+        int choice = in.nextInt();
+
+        // if (choice == 7){
+        //     System.out.println("sad to see you go darling :( bye for now love..");
+        //     return
+        // }
+
         
+        return "";
     }
 
     //getting foodies
