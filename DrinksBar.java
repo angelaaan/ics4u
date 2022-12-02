@@ -42,7 +42,7 @@ public class DrinksBar extends FoodCorner {
                             + "         ((|          |\n"
                             + "        .--\\          /--.\n"
                             + "      '._  '========'  _.'\n"
-                            + "          `\"\"\"\"\"\"\"\"\"\"\"\"`",
+                            + "          `\"\"\"\"\"\"\"\"\"\"\"\"`\n",
                     "               )\n"
                             + "              (\n"
                             + "                  )\n"
@@ -50,7 +50,7 @@ public class DrinksBar extends FoodCorner {
                             + "         ((|          |\n"
                             + "        .--\\          /--.\n"
                             + "      '._  '========'  _.'\n"
-                            + "          `\"\"\"\"\"\"\"\"\"\"\"\"`",
+                            + "          `\"\"\"\"\"\"\"\"\"\"\"\"`\n",
                     "        .:.\n"
                             + "       _oOoOo\n"
                             + "      [_|||||\n"
@@ -80,7 +80,7 @@ public class DrinksBar extends FoodCorner {
 
     //
     public void printMenu() {
-        System.out.println("•━━ DRINKS BAR ━━•\n");
+        System.out.println("	\u001B[45mDRINKS BAR \u001b[0m\n");
         super.printMenu();
     }
 
@@ -92,7 +92,7 @@ public class DrinksBar extends FoodCorner {
         super.run();
 
         //prints out introduction
-        System.out.println("Howdy Stranger! Welcome to the FOODTRUCK"
+        System.out.println("Howdy Stranger! Welcome to the DRINKS BAR"
                 + "\nWhat can I get for you today?\nChoice :");
         
         //calls the user decision

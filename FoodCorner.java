@@ -28,6 +28,11 @@ public abstract class FoodCorner {
         return balance;
     }
 
+    // accessor to get name of the food they bought
+    public String getPurchaseFoodName(){
+        return name;
+    }
+
     // abtract method
     public abstract int[] makeMenu();
 
@@ -45,9 +50,7 @@ public abstract class FoodCorner {
 
         // introductions
         System.out.println("\n-----------------------\n"
-                + "Greetings! Welcome To The FoodCorner! [hit ENTER to continue])");
-        in.nextLine();
-        System.out.println("Someone will be with you very shortly :)");
+                + "[hit ENTER to continue])");
         in.nextLine();
         System.out.println("Please settle in and take a look at our menu...");
         in.nextLine();
@@ -87,10 +90,11 @@ public abstract class FoodCorner {
                     // checking if user chose to leave or not
                     if (choice == 7) {
                         System.out.println("See you soon <3 goodbye now");
+                        name = "exit";
 
                         // checking to see what the user input and returning accordingly
                     } else {
-                        System.out.println("Purchase of " + menu[0][(choice - 1)]+" Successful!");
+                        System.out.println("Purchase of " + menu[0][(choice - 1)] + " Successful!");
 
                         // printing out image for the interactiveness
                         System.out.println("------------------------\n"
