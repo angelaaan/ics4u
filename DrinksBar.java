@@ -1,4 +1,4 @@
-import java.util.Random;
+import java.util.*;
 
 public class DrinksBar extends FoodCorner {
     Random rand = new Random();
@@ -78,71 +78,25 @@ public class DrinksBar extends FoodCorner {
         return arr;
     }
 
+    //
     public void printMenu() {
         System.out.println("•━━ DRINKS BAR ━━•\n");
         super.printMenu();
     }
 
-    public String getGrapeJuice() {
-        String juice = "                  __\n"
-                + "                 /.-\n"
-                + "         ______ //\n"
-                + "        /______'/|\n"
-                + "        [       ]|\n"
-                + "        [ Grape ]|\n"
-                + "        [ Juice ]|\n"
-                + "        [  _\\_  ]|\n"
-                + "        [  :::  ]|\n"
-                + "        [   :'  ]/\n"
-                + "        '-------'\n";
-        return juice;
-    }
+    //the run method that adds onto the superclass's existing method
+    public void run() {
+        Scanner in = new Scanner(System.in);
 
-    public String getPepsi() {
-        String pepsi = "       .=.\n"
-                + "       } {\n"
-                + "      .' '.\n"
-                + "     /     \\\n"
-                + "     ;'---';\n"
-                + "     |MILK!|\n"
-                + "     | .-. |\n"
-                + "     | '-' |\n"
-                + "     |'---'|\n"
-                + "     '._._.'\n";
-        return pepsi;
-    }
+        //refers to superclass run method
+        super.run();
 
-    public String getCoffee() {
-        String coffee = "               )\n"
-                + "              (\n"
-                + "                  )\n"
-                + "          ,.----------.\n"
-                + "         ((|          |\n"
-                + "        .--\\          /--.\n"
-                + "      '._  '========'  _.'\n"
-                + "          `\"\"\"\"\"\"\"\"\"\"\"\"`";
-        return coffee;
-    }
-
-    public String getTea() {
-        String tea = "         _..,----,.._\n"
-                + "      .-;'-.,____,.-';\n"
-                + "     (( |            |\n"
-                + "      `))            ;\n"
-                + "       ` \\          /\n"
-                + "      .-' `,.____.,' '-.\n"
-                + "     (     '------'     )\n"
-                + "      `-=..________..--'";
-        return tea;
-    }
-
-    public String getRootBeer() {
-        String root = "        .:.\n"
-                + "       _oOoOo\n"
-                + "      [_|||||\n"
-                + "        |||||\n"
-                + "        ~~~~~\n";
-        return root;
+        //prints out introduction
+        System.out.println("Howdy Stranger! Welcome to the FOODTRUCK"
+                + "\nWhat can I get for you today?\nChoice :");
+        
+        //calls the user decision
+        userDecision();
     }
 
 }
