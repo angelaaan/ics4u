@@ -1,3 +1,7 @@
+/* Name : Angela Nguyen
+ * Class : ICS4U
+ * Parent Class of the Food Corner of the
+ */
 import java.util.*;
 
 public abstract class FoodCorner {

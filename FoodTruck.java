@@ -3,7 +3,7 @@ import java.util.*;
 public class FoodTruck extends FoodCorner {
     Random rand = new Random();
 
-    //menu array that is used to fill the constructor
+    //menu array that is used to fill the constructor from the parent class
     static String[][] menuArr = { { "burger n fries", "pizza", "chocolate", "pickles", "cherries", "pretzel", "EXIT" },
             { "                            |\\ /| /|_/|\n"
                     + "                          |\\||-|\\||-/|/|\n"
@@ -68,7 +68,8 @@ public class FoodTruck extends FoodCorner {
         //fills in the instance variables
         balance = money;
 
-        //randomizes the prices for every item
+        // changes the priceMenu to be the same as the array that
+        // the makeMenu() method returns
         priceMenu = makeMenu();
     }
 
@@ -78,6 +79,7 @@ public class FoodTruck extends FoodCorner {
 
         Random rand = new Random();
 
+        //For loop that randomizes the array with numbers from 2 - 22
         for (int i = 0; i < arr.length - 1; i++) {
             arr[i] = rand.nextInt(15) + 5;
         }
@@ -88,6 +90,8 @@ public class FoodTruck extends FoodCorner {
     //prints the menu with the FoodTruck Title first and then runs the superClass's printMenu
     public void printMenu() {
         System.out.println("\u001B[45mFOOD TRUCK \u001b[0m\n");
+        
+        //command that runs the parent class printMenu()         
         super.printMenu();
     }
 

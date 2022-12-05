@@ -3,6 +3,7 @@ import java.util.*;
 public class DrinksBar extends FoodCorner {
     Random rand = new Random();
 
+    //menu array that is used to fill the constructor from the parent class
     static String[][] menuArr = { { "grape juice", "milk", "Pepsi", "coffee", "tea", "root beer", "EXIT" },
             { "                  __\n"
                     + "                 /.-\n"
@@ -60,9 +61,17 @@ public class DrinksBar extends FoodCorner {
                             + "        ~~~~~\n",
                     "" } };
 
+    //sets up the child class Drinks Bar constructor                
     public DrinksBar(int money) {
+
+        //uses the super method to fill parent class
         super(menuArr);
+
+        //fills in the instance variable
         balance = money;
+
+        // changes the priceMenu to be the same as the array that
+        // the makeMenu() method returns
         priceMenu = makeMenu();
     }
 
@@ -80,8 +89,11 @@ public class DrinksBar extends FoodCorner {
         return arr;
     }
 
+    //method that prints out the header of the menu
     public void printMenu() {
         System.out.println("\u001B[45mDRINKS BAR \u001b[0m\n");
+        
+        //command that runs the parent class printMenu() 
         super.printMenu();
     }
 
