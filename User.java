@@ -1,8 +1,11 @@
+import java.text.NumberFormat;
+
 public class User {
     
     private int tokens, balance;
     private FoodCorner[] food = new FoodCorner[0];
     private Prize[] prizes = new Prize[0];
+    private NumberFormat f = NumberFormat.getCurrencyInstance();
 
     public User(int newTokens, int newBalance){
         tokens = newTokens;
@@ -78,7 +81,7 @@ public class User {
 
     public void inventory(){
 
-        System.out.println("\033[1mBalance: " + balance);
+        System.out.println("\033[1mBalance: " + f.format(balance));
         System.out.println("Tokens: " + tokens+"\033[0m\n");
 
         if (food.length > 0){
