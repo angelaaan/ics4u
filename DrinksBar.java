@@ -60,19 +60,19 @@ public class DrinksBar extends FoodCorner {
                             + "        ~~~~~\n",
                     "" } };
 
-    static int[] priceMenuArr = new int[6];
-
     public DrinksBar(int money) {
         super(menuArr);
         balance = money;
         priceMenu = makeMenu();
     }
 
+    //The randomizes an array with 7 spaces with randomized numbers
     public int[] makeMenu() {
         int[] arr = new int[7];
 
         Random rand = new Random();
 
+        //For loop that randomizes the array with numbers from 2 - 22
         for (int i = 0; i < arr.length - 1; i++) {
             arr[i] = rand.nextInt(20) + 2;
         }
@@ -80,9 +80,8 @@ public class DrinksBar extends FoodCorner {
         return arr;
     }
 
-    //
     public void printMenu() {
-        System.out.println("	\u001B[45mDRINKS BAR \u001b[0m\n");
+        System.out.println("\u001B[45mDRINKS BAR \u001b[0m\n");
         super.printMenu();
     }
 

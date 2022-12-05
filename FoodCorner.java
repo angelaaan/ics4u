@@ -13,7 +13,7 @@ public abstract class FoodCorner {
     // declare the priceMenu that will have randomized prices
     int[] priceMenu = new int[7];
 
-    // constructor
+    // parent class constructor
     public FoodCorner(String[][] newMenu) {
         menu = newMenu;
     }
@@ -39,26 +39,9 @@ public abstract class FoodCorner {
     // public void printMenu();
     public void printMenu() {
         for (int i = 0; i < 7; i++) {
-            System.out.print("[" + (i + 1) + "] --" + menu[0][i] + " $" + priceMenu[i] + "\n");
+            System.out.print("[" + (i + 1) + "] --" + menu[0][i] 
+            + " $" + priceMenu[i] + "\n");
         }
-    }
-
-    // method that will run the program as if it was a game
-    public void run() {
-
-        Scanner in = new Scanner(System.in);
-
-        // introductions
-        System.out.println("\n-----------------------\n"
-                + "[hit ENTER to continue])");
-        in.nextLine();
-        System.out.println("Please settle in and take a look at our menu...");
-        in.nextLine();
-
-        // calls on the printMenu method that prints whatever menu
-        // menu prints depending on whichever class type it is
-        printMenu();
-
     }
 
     // Method that takes in userDecision and changes the name and image variables
@@ -122,9 +105,27 @@ public abstract class FoodCorner {
         }
     }
 
+    // method in superclass that will run the program as 
+    //if it was a game
+    public void run() {
+
+        Scanner in = new Scanner(System.in);
+
+        // introductions
+        System.out.println("\n-----------------------\n"
+                + "[hit ENTER to continue])");
+        in.nextLine();
+        System.out.println("Please settle in and take" 
+        + " a look at our menu...");
+        in.nextLine();
+
+        // calls on the printMenu
+        printMenu();
+
+    }
+
     // Overwritten toString method
     public String toString() {
         return name + "\n" + image;
-
     }
 }

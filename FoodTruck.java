@@ -59,12 +59,16 @@ public class FoodTruck extends FoodCorner {
                             + "   '-`'.___.'`-'\n",
                     "" } };
 
-    //fills the constructor
+    //sets up the child class Food Truck constructor
     public FoodTruck(int money) {
 
-        //fills with the super 
+        //fills with the super method
         super(menuArr);
+
+        //fills in the instance variables
         balance = money;
+
+        //randomizes the prices for every item
         priceMenu = makeMenu();
     }
 
@@ -83,7 +87,7 @@ public class FoodTruck extends FoodCorner {
 
     //prints the menu with the FoodTruck Title first and then runs the superClass's printMenu
     public void printMenu() {
-        System.out.println("•━━ FOOD TRUCK ━━•\n");
+        System.out.println("\u001B[45mFOOD TRUCK \u001b[0m\n");
         super.printMenu();
     }
 
